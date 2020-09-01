@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+      .container{
+          text-align: center;
+      }
+      .form-control{
+          border-radius: 30px;
+          background-color: lightgrey;
+      }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg sticky-top" style="background-color: black;">
+        <a class="navbar-brand"><h3 style="color: white;">Amazon</h3></a>
+        <button class="navbar-toggler white" type="button" data-toggle="collapse" data-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item">
+                    <input type="search" name="search" id="" class="form-control" placeholder="Search">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: white;">Cart <small class="badge badge-primary" id="nav-cart" style="border-radius: 50%;"></small></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-xl m-2">
+        <div class="card" style="width: 23rem;">
+            <div class="card-body">
+                <img src="image/neonbrand-zFSo6bnZJTw-unsplash.jpg" alt="" class="card-img-top" style="width: 200px; height: 200px; border-radius: 50%;"><br>
+                <h2 class="card-title">School Desk</h2>
+                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, nihil?</p>
+                <p class="card-text">Price: $200</p>
+                <button id="cart" class="btn" style="background-color: black; color: white;">Add to Cart</button>
+            </div>
+        </div>
+        </div>
+        <div class="col-xl m-2">
+       <div class="card" style="width: 23rem;">
+            <div class="card-body">
+                <img src="image/neonbrand-zFSo6bnZJTw-unsplash.jpg" alt="" class="card-img-top" style="width: 200px; height: 200px; border-radius: 50%;"><br>
+                <h2 class="card-title">Student</h2>
+                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, nihil?</p>
+                <p class="card-text">Price: $10000</p>
+                <button id="cart1" class="btn" style="background-color: black; color: white;">Add to Cart</button>
+            </div>
+        </div>
+        </div>
+        <div class="col-xl m-2">
+            <div class="card" style="width: 23rem;">
+                <div class="card-body">
+                    <img src="image/neonbrand-zFSo6bnZJTw-unsplash.jpg" alt="" class="card-img-top" style="width: 200px; height: 200px; border-radius: 50%;"><br>
+                    <h2 class="card-title">Books</h2>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint, nihil?</p>
+                    <p class="card-text">Price: $30</p>
+                    <button id="cart2" class="btn" style="background-color: black; color: white;">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var cart = document.getElementById('cart');
+        var cart1 = document.getElementById('cart1');
+        var cart2 = document.getElementById('cart2');
+        var navCart = document.getElementById('nav-cart');
+        var count = 0;
+        cart.addEventListener('click', () => {
+            if (cart.textContent === 'Add to Cart') {
+                cart.innerHTML = 'Remove from cart';
+                count += 1;
+                navCart.innerHTML = count;
+            } else{
+                cart.innerHTML = 'Add to Cart';
+                count --;
+                navCart.innerHTML = count;
+            }
+            if (count == 0) {
+                navCart.innerHTML = ''
+            }
+        });
+        cart1.addEventListener('click', () => {
+            if (cart1.textContent === 'Add to Cart') {
+                cart1.innerHTML = 'Remove from cart';
+                count += 1;
+                navCart.innerHTML = count;
+            } else {
+                cart1.innerHTML = 'Add to Cart';
+                count --;
+                navCart.innerHTML = count;
+            }
+            if (count == 0) {
+                navCart.innerHTML = ''
+            }
+        });
+        cart2.addEventListener('click', () => {
+            if (cart2.textContent === 'Add to Cart') {
+                cart2.innerHTML = 'Remove from cart';
+                count += 1;
+                navCart.innerHTML = count;
+            } else {
+                cart2.innerHTML = 'Add to Cart';
+                count --;
+                navCart.innerHTML = count;
+            }
+            if (count == 0) {
+                navCart.innerHTML = ''
+            }
+        })
+    </script>
+
+
+
+<!-- jQuery -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- Your custom scripts (optional) -->
+<script type="text/javascript"></script>
+</body>
+</html>
